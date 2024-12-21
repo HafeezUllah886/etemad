@@ -263,8 +263,10 @@ namespace App\Models {
      *
      * @property \Illuminate\Support\Carbon|null $updated_at
      * @property \Illuminate\Support\Carbon|null $created_at
+     * @property string|null $country
+     * @property string|null $city
+     * @property string|null $postal
      * @property string|null $address
-     * @property string|null $contact
      * @property string|null $category
      * @property string $type
      * @property string $title
@@ -277,8 +279,10 @@ namespace App\Models {
      * @method static \Illuminate\Database\Eloquent\Builder|accounts whereTitle($value)
      * @method static \Illuminate\Database\Eloquent\Builder|accounts whereType($value)
      * @method static \Illuminate\Database\Eloquent\Builder|accounts whereCategory($value)
-     * @method static \Illuminate\Database\Eloquent\Builder|accounts whereContact($value)
      * @method static \Illuminate\Database\Eloquent\Builder|accounts whereAddress($value)
+     * @method static \Illuminate\Database\Eloquent\Builder|accounts wherePostal($value)
+     * @method static \Illuminate\Database\Eloquent\Builder|accounts whereCity($value)
+     * @method static \Illuminate\Database\Eloquent\Builder|accounts whereCountry($value)
      * @method static \Illuminate\Database\Eloquent\Builder|accounts whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder|accounts whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder|accounts business()
@@ -4104,6 +4108,7 @@ namespace App\Models {
      * @property double $taxValue
      * @property double $tax
      * @property double $discount
+     * @property date|null $dueDate
      * @property date $date
      * @property int $customerID
      * @property int $id
@@ -4115,6 +4120,7 @@ namespace App\Models {
      * @method static \Illuminate\Database\Eloquent\Builder|sales whereId($value)
      * @method static \Illuminate\Database\Eloquent\Builder|sales whereCustomerid($value)
      * @method static \Illuminate\Database\Eloquent\Builder|sales whereDate($value)
+     * @method static \Illuminate\Database\Eloquent\Builder|sales whereDuedate($value)
      * @method static \Illuminate\Database\Eloquent\Builder|sales whereDiscount($value)
      * @method static \Illuminate\Database\Eloquent\Builder|sales whereTax($value)
      * @method static \Illuminate\Database\Eloquent\Builder|sales whereTaxvalue($value)

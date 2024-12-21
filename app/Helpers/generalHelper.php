@@ -129,14 +129,14 @@ function productStockValue($id)
 
 function projectNameAuth()
 {
-    return "AMHAK LIMITED";
+    return "ETEMAD FOODS & DRINKS";
 }
 
 function projectNameHeader()
 {
-    return "AMHAK LIMITED";
+    return "ETEMAD FOODS & DRINKS";
 }
 function projectNameShort()
 {
-    return "AL";
+    return "EFD";
 }
