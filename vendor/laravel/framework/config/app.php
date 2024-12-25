@@ -90,13 +90,13 @@ return [
     'domains' => [
         'amhak.test',
         'yaseen-s.test',
-        'amhak.nexgenpakistan.com',
+        'etemad.nexgenpakistan.com',
         'testyaseen.diamondquetta.com',
         'yaseen.run',
     ],
 
     'databases' => [
-        'amhak',
+        'u676177725_etemad',
         'test',
     ],
 
