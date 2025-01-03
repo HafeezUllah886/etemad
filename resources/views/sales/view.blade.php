@@ -26,6 +26,7 @@
                                         <h5 class="fs-14 mb-0">Adres: <strong>{{$sale->customer->address}} </strong></h5>
                                         <h5 class="fs-14 mb-0">Postcode en Stad: <strong>{{$sale->customer->postal}} | {{$sale->customer->city}} </strong></h5>
                                         <h5 class="fs-14 mb-0">Land: <strong>{{$sale->customer->country}} </strong></h5>
+                                        <h5 class="fs-14 mb-0">belastingregistratienummer: <strong>{{$sale->customer->tax}} </strong></h5>
                                     </div>
                                     <div class="col-6">
                                         <h5 class="fs-14 mb-0">Factuurnummer: <strong>{{$sale->id}} </strong></h5>

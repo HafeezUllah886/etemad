@@ -58,6 +58,7 @@ class AccountsController extends Controller
                             'category' => $request->category,
                             'address' => $request->address,
                             'postal' => $request->postal,
+                            'tax' => $request->tax,
                             'city' => $request->city,
                             'country' => $request->country,
                         ]
@@ -162,6 +163,7 @@ class AccountsController extends Controller
                 'category' => $request->category,
                 'address' => $request->address ?? null,
                 'postal' => $request->postal ?? null,
+                'tax' => $request->tax ?? null,
                 'city' => $request->city ?? null,
                 'country' => $request->country ?? null,
 

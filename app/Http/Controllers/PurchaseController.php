@@ -138,6 +138,22 @@ class PurchaseController extends Controller
                 createTransaction($request->accountID, $request->date, 0, $net, "Payment of Purchase No. $purchase->id", $ref);
                 createTransaction($request->vendorID, $request->date, $net, $net, "Payment of Purchase No. $purchase->id", $ref);
             }
+            elseif($request->status == 'partial')
+            {
+                purchase_payments::create(
+                    [
+                        'purchaseID'    => $purchase->id,
+                        'accountID'     => $request->accountID,
+                        'date'          => $request->date,
+                        'amount'        => $request->partial,
+                        'notes'         => "Parital Payment",
+                        'refID'         => $ref,
+                    ]
+                );
+
+                createTransaction($request->accountID, $request->date, 0, $request->partial, "Parial Payment of Purchase No. $purchase->id", $ref);
+                createTransaction($request->vendorID, $request->date, $net, $request->partial, "Partial Payment of Purchase No. $purchase->id", $ref);
+            }
             elseif($request->status == 'advanced')
             {
                 $balance = getAccountBalance($request->vendorID);
@@ -303,6 +319,22 @@ class PurchaseController extends Controller
                 );
                 createTransaction($request->accountID, $request->date, 0, $net, "Payment of Purchase No. $purchase->id", $ref);
                 createTransaction($request->vendorID, $request->date, $net, $net, "Payment of Purchase No. $purchase->id", $ref);
+            }
+            elseif($request->status == 'partial')
+            {
+                purchase_payments::create(
+                    [
+                        'purchaseID'    => $purchase->id,
+                        'accountID'     => $request->accountID,
+                        'date'          => $request->date,
+                        'amount'        => $request->partial,
+                        'notes'         => "Parital Payment",
+                        'refID'         => $ref,
+                    ]
+                );
+
+                createTransaction($request->accountID, $request->date, 0, $request->partial, "Parial Payment of Purchase No. $purchase->id", $ref);
+                createTransaction($request->vendorID, $request->date, $net, $request->partial, "Partial Payment of Purchase No. $purchase->id", $ref);
             }
             elseif($request->status == 'advanced')
             {

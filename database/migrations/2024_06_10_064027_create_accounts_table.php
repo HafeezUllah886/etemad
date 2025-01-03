@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('category')->nullable();
             $table->string('address')->nullable();
             $table->string('postal')->nullable();
+            $table->string('tax')->nullable();
             $table->string('city')->nullable();
             $table->string('country')->nullable();
             $table->timestamps();

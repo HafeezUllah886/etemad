@@ -71,6 +71,13 @@
                                         class="form-control">
                                 </div>
                             </div>
+                            <div class="col-6 mt-2 customer" >
+                                <div class="form-group">
+                                    <label for="tax">Tax No.</label>
+                                    <input type="text" name="tax" id="tax" value="{{ $account->tax }}"
+                                        class="form-control">
+                                </div>
+                            </div>
 
                             @endif
 

@@ -265,6 +265,7 @@ namespace App\Models {
      * @property \Illuminate\Support\Carbon|null $created_at
      * @property string|null $country
      * @property string|null $city
+     * @property string|null $tax
      * @property string|null $postal
      * @property string|null $address
      * @property string|null $category
@@ -281,6 +282,7 @@ namespace App\Models {
      * @method static \Illuminate\Database\Eloquent\Builder|accounts whereCategory($value)
      * @method static \Illuminate\Database\Eloquent\Builder|accounts whereAddress($value)
      * @method static \Illuminate\Database\Eloquent\Builder|accounts wherePostal($value)
+     * @method static \Illuminate\Database\Eloquent\Builder|accounts whereTax($value)
      * @method static \Illuminate\Database\Eloquent\Builder|accounts whereCity($value)
      * @method static \Illuminate\Database\Eloquent\Builder|accounts whereCountry($value)
      * @method static \Illuminate\Database\Eloquent\Builder|accounts whereCreatedAt($value)

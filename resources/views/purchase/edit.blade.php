@@ -145,7 +145,12 @@
                                         <option value="advanced">Paid in Advance</option>
                                         <option value="paid">Paid</option>
                                         <option value="pending">Pending</option>
+                                        <option disabled value="partial">Partial</option>
                                     </select>
+                                </div>
+                                <div class="form-group status2 d-none mt-2">
+                                    <label for="partial">Paid Amount</label>
+                                    <input type="number" name="partial" step="any" id="partial" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 mt-2">
@@ -294,10 +299,29 @@
             }
             });
         }
+        checkstatus();
+    }
+
+    function checkstatus()
+    {
+        var id = $("#status1").find(":selected").val();
+        if(id == "partial")
+        {
+            $(".status2").removeClass("d-none");
+            
+        }
+        else
+        {
+            $(".status2").addClass("d-none");
+           
+        }
     }
 
     $("#vendorID").on("change", function(){
         checkAccount();
+    });
+    $("#status1").on("change", function(){
+        checkstatus();
     });
     checkAccount();
 
